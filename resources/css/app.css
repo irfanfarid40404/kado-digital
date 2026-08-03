@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Fredoka:wght@400;500;600;700&family=Inter+Tight:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@theme {
+  --font-display-romantic: 'Fraunces', serif;
+  --font-display-playful: 'Fredoka', sans-serif;
+  --font-display-elegant: 'Playfair Display', serif;
+  --font-display-grotesk: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-body-elegant: 'Inter Tight', sans-serif;
+
+  --color-romantic-base: #FAF3E9;
+  --color-romantic-deep: #6B1F2A;
+  --color-romantic-soft: #A8434F;
+  --color-romantic-gold: #C9A24B;
+  --color-romantic-ink: #2E2A26;
+  --color-romantic-card: #F1DCD4;
+
+  --color-playful-base: #FFF6E9;
+  --color-playful-coral: #F4623A;
+  --color-playful-mustard: #F2B705;
+  --color-playful-teal: #2E8B8B;
+  --color-playful-ink: #3A2A1E;
+  --color-playful-card: #FFDCC2;
+
+  --color-elegant-base: #0F1B2D;
+  --color-elegant-card: #1C2E47;
+  --color-elegant-gold: #D4B98C;
+  --color-elegant-text: #EDE3D0;
+  --color-elegant-accent: #7A2E3D;
+}
+
+/* Neo-Brutalism Core Utilities */
+.neo-border {
+  border: 3px solid #000000;
+}
+
+.neo-border-sm {
+  border: 2px solid #000000;
+}
+
+.neo-border-lg {
+  border: 4px solid #000000;
+}
+
+.neo-border-t {
+  border-top: 3px solid #000000;
+}
+
+.neo-border-b {
+  border-bottom: 3px solid #000000;
+}
+
+.neo-shadow {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.neo-shadow-sm {
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.neo-shadow-md {
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+.neo-shadow-lg {
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+
+.neo-shadow-xl {
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+.neo-btn {
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  transition: all 0.15s ease-in-out;
+}
+
+.neo-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.neo-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.neo-card {
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+
+.neo-card-sm {
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.neo-badge {
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.neo-input {
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+  transition: all 0.15s ease;
+}
+
+.neo-input:focus {
+  box-shadow: 4px 4px 0px 0px #000000;
+  outline: none;
+}
+
+/* Tape Effect for Neo-Brutalist cards */
+.neo-tape {
+  position: relative;
+}
+.neo-tape::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 70px;
+  height: 20px;
+  background: rgba(242, 183, 5, 0.85);
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px #000;
+  z-index: 10;
+}
+
+/* Watermark Pattern */
+.preview-watermark-overlay {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.12),
+    rgba(0, 0, 0, 0.12) 120px,
+    transparent 120px,
+    transparent 240px
+  );
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Floating animation for surprise elements */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(4deg); }
+}
+
+.animate-float {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+[x-cloak] { display: none !important; }
